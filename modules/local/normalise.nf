@@ -1,6 +1,5 @@
 process NORMALISE {
-    container "396758234180.dkr.ecr.us-east-1.amazonaws.com/nf-rnaseq/normalisation:v2"
-    // errorStrategy 'finish'
+    container "robsyme/temporary-empress:1.0.0"
     cpus 2
     memory '37 GB'
     publishDir "${params.outdir}", mode: 'copy'
@@ -14,7 +13,6 @@ process NORMALISE {
 
     output:
     path ('*.csv'), optional: true
-    // stdout
 
     script:
     """
