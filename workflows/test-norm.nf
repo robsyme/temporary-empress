@@ -60,7 +60,7 @@ include { NORMALISE } from '../modules/local/normalise'
 */
 
 workflow TEST_NORM {
-    NORMALISE(params.matrix, params.subset, params.nsub, params.method)
+    NORMALISE(file(params.matrix), params.subset, params.nsub, params.method)
 }
 
 
