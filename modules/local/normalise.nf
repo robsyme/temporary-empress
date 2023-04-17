@@ -1,7 +1,7 @@
 process NORMALISE {
     container "robsyme/temporary-empress:1.0.0"
     cpus 2
-    memory '6 GB'
+    memory '37 GB'
     publishDir "${params.outdir}", mode: 'copy'
     label 'process_high'
 
